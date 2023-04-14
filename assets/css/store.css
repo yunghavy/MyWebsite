@@ -197,6 +197,19 @@ hr{
  /* VIDEO STACK */
  
 
+ .videos-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-column-gap: 40px;
+}
+
+.videos-grid-video {
+}
+
+.videos-grid-video > iframe {
+  height:278px;
+}
+
 
 
 
