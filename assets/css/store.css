@@ -210,7 +210,9 @@ hr{
   height:278px;
 }
 
-
+.card {
+  margin: 1em auto;
+}
 
 
 
