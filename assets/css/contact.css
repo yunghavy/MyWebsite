@@ -1,0 +1,349 @@
+/* Grid */
+.grid {
+	width: calc((100% / 12) * 7);
+	margin: 0 auto;
+  }
+  
+  /* Transition Ease */
+  .ease {
+	transition: all 333ms ease-in-out;
+  }
+  
+  /* Lato */
+  .lato-1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+  }
+  
+  .lato-1-i {
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-style: italic;
+  }
+  
+  .lato-3 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+  }
+  
+  .lato-3-i {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+  }
+  
+  .lato-4 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+  }
+  
+  .lato-4-i {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-style: italic;
+  }
+  
+  .lato-7 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+  }
+  
+  .lato-7-i {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-style: italic;
+  }
+  
+  .lato-9 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+  }
+  
+  .lato-9-i {
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	font-style: italic;
+  }
+  
+  /* Colors */
+  :root {
+	--blue: #313A3D;
+	--orange: #FD9638;
+	--dark-orange: darken(var(--orange), 20%);
+	--grey: #B6B6B6;
+	--light-grey: lighten(var(--grey), 15%);
+	--background: url(https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) no-repeat;
+	--field-color: #E8E9EA;
+  }
+
+
+  
+  body {
+	background: var(--background);
+	background-size: cover;
+    height:100%;
+    background-color: #000;
+	font-size: 62.5%;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: var(--grey);
+  }
+  
+  section {
+	background: rgba(255, 255, 255, 0.411);
+	margin: 60px auto 120px;
+	border-top: 15px solid var(--blue);
+	text-align: center;
+	padding: 50px 0 110px;
+	width: 80%;
+	max-width: 1100px;
+  }
+  
+  section h1 {
+	color:rgba(255, 153, 0, 0.493);
+	margin-bottom: 40px;
+	font-size: 4em;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+  }
+  
+  /* Form */
+  form {
+	width: calc((100% / 12) * 7);
+  }
+  
+  form .field {
+	width: 100%;
+	position: relative;
+	margin-bottom: 15px;
+  }
+  
+  form .field label {
+	text-transform: uppercase;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: var(--blue);
+	width: 100%;
+	padding: 18px 0;
+	font-size: 1.45em;
+	letter-spacing: 0.075em;
+	transition: all 333ms ease-in-out;
+  }
+  
+  form .field label span {
+	font-family: 'SSStandard';
+	opacity: 0;
+	color: white;
+	display: block;
+	position: absolute;
+	top: 12px;
+	left: 7%;
+	font-size: 2.5em;
+	text-shadow: 1px 2px 0 var(--dark-orange);
+	transition: all 333ms ease-in-out;
+  }
+  
+  form input[type="text"],
+  form textarea {
+	border: none;
+	background: var(--field-color);
+	width: calc(100% - 18% - 1.5%);
+	margin: 0;
+	padding: 18px 0;
+	padding-left: calc(18% + 1.5%);
+	color: var(--blue);
+	font-size: 1.4em;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+  }
+  
+  form textarea#msg {
+	height: 18px;
+	resize: none;
+	transition: all 333ms ease-in-out;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="text"].focused,
+  form textarea:focus,
+  form textarea.focused {
+	outline: none;
+  }
+  
+  form input[type="text"].focused#msg {
+	padding-bottom: 150px;
+  }
+  
+  form input[type="text"].focused + label,
+  form textarea.focused + label {
+	width: 18%;
+	background: var(--orange);
+	color: var(--blue);
+  }
+  
+  form input[type="text"].focused + label span,
+  form textarea.focused + label span {
+	color: var(--orange);
+  }
+  
+  form .field:hover label {
+	width: 18%;
+	background: var(--blue);
+	color: white;
+  }
+  
+  form input[type="submit"] {
+	background: var(--orange);
+	color: white;
+	-webkit-appearance: none;
+	border: none;
+	text-transform: uppercase;
+	position: relative;
+	padding: 13px 50px;
+	font-size: 1.4em;
+	letter-spacing: 0.1em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	transition: all 333ms ease-in-out;
+  }
+  
+  form input[type="submit"]:hover {
+	background: var(--blue);
+	color: var(--orange);
+  }
+  
+  form input[type="submit"]:focus {
+	outline: none;
+	background: var(--dark-orange);
+  }
+
+  #hire {
+	
+	justify-content: space-between;
+  }
+  
+  @media (max-width: 768px) {
+	.contact-container {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  margin: 0 auto;
+	  max-width: 80%;
+	}
+
+	.header-container {
+		text-align: center;
+	}
+	
+	.field {
+	  width: 100%;
+	}
+	
+	.button {
+	  margin: 20px 0;
+	}
+	.field input,
+	.field textarea {
+	  max-width: 100%;
+	}
+  }
+  @media (min-width: 769px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+  }
+
+  .header-container {
+    text-align: center;
+  }
+
+  .field {
+    width: 100%;
+  }
+
+  .button {
+    margin: 20px 0;
+  }
+
+  .field input,
+  .field textarea {
+    max-width: 100%;
+  }
+}
+  
+  #contact-form {
+	flex: 1;
+	margin-right: 20px;
+  }
+  
+  
+  .map iframe {
+	width: 400px;
+	height: 300px;
+  }
+  
+  .address, .email {
+	margin-top: 20px;
+  }
+  
+  .address h2, .email h2 {
+	font-size: 18px;
+  }
+  
+  .address p, .email p {
+	font-size: 14px;
+  }
+  
+  .logo {
+	color: gray;
+	float: left;
+	
+  	
+  }
+  /* Hamburger Menu Styles */
+.hamburger {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+  }
+  
+  .line {
+	width: 100%;
+	height: 3px;
+	background-color: gray;
+	transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Navigation Styles */
+  .menu {
+	display: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+  }
+  
+  .menu li {
+	margin-bottom: 15px;
+  }
+  
+  .menu li a {
+	color: gray;
+	text-decoration: none;
+	font-size: 16px;
+	transition: color 0.3s ease-in-out;
+  }
+  
+  .menu li a:hover {
+	color: black;
+  }
+  

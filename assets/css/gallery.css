@@ -1,0 +1,404 @@
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .image-gallery > li {
+    flex: 1 1 auto;
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .image-gallery li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+  }
+  .image-gallery::after {
+    content: "";
+    flex-grow: 999;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .image-gallery {
+      flex-direction: row;
+    }
+  }
+
+  /* Hover effect for the gallery images */
+.image-gallery li {
+  position: relative;
+  overflow: hidden;
+}
+.image-gallery li .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 248, 197, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-gallery li:hover .overlay {
+  opacity: 1;
+}
+/* Fade-in animation for the parallax section */
+.parallax-section {
+  opacity: 0;
+  animation: fade-in 1s ease forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+  .div-contact{
+    align: center;
+    color: white;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+  .bnt-social{
+    border-radius: 50%;
+    border-color:  CornflowerBlue;
+    border-width: 2px;
+    border-style: solid;
+    color:  CornflowerBlue;
+    background-color: white;
+  }
+  .div-line{
+    background-color: white;
+    height: 1px;
+  }
+  /*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-light,
+.btn-light:hover,
+.btn-light:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+/* body 
+  /* text-shadow: 0 .05rem .1rem rgb(255, 255, 255);
+  box-shadow: inset 0 0 5rem rgb(255, 255, 255);
+} */ 
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: #ffb662f3
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #ff8b06da;
+  border-bottom-color: #ff8b06da;
+}
+
+
+footer {
+  
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+a {
+  color: #666;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #faad07;
+}
+
+
+/*----- Genral Classes start ------*/
+body {
+	background: #ffffff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	text-align: center;
+	color: #999;
+	background: rgba(0, 0, 0, 0.36);
+	margin: 0;
+	padding: 5px;
+}
+h2 {
+	text-align: center;
+	color: #999; 
+	margin: 0;
+	padding: 5px;
+	font-size: 1.8em;
+	margin-bottom: 30px;
+} 
+ 
+.wrapper,.copyright {
+	padding: 20px;
+	text-align: center;
+}
+hr{
+	margin: 30px 20px;
+	border-top:2px solid #1C1E26 ;
+	border-bottom:2px solid #38404D;
+}
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+.list-inline li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+
+/* LOading screen */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  border-top-color: #333;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.photo:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+ /* Add custom CSS for parallax effect */
+ .parallax-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  perspective: 1000px;
+}
+
+.parallax-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.parallax-section .content {
+  transform: translateZ(-100px) scale(0.8);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.parallax-section:hover .content {
+  transform: translateZ(0) scale(1);
+  opacity: 1;
+}
+
+.parallax-section h1 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.parallax-section.py-3 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+/* OVERLAY POP OUT */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.image-gallery li:hover .overlay {
+  opacity: 1;
+}
+
+.image-gallery li img {
+  cursor: pointer;
+}
+
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+}
+
+.image-overlay img {
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button style */
+
+#button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+}
+

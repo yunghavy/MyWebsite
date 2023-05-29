@@ -1,57 +1,35 @@
-<!doctype html>
-<html lang="en" class="h-100">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    
-    
-    <title>Gallery</title>
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GALLERY</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
 
-    
+    <!-- Favicons-->
+
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="manifest" href="assets/img/site.webmanifest">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <!-- Custom css files-->
 
-<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="assets/css/store.css" rel="stylesheet">
-<style>
-  .div-contact{
-    align: center;
-    color: white;
-    padding-top: 0%;
-    padding-bottom: 0%;
-  }
-  .bnt-social{
-    border-radius: 50%;
-    border-color:  CornflowerBlue;
-    border-width: 2px;
-    border-style: solid;
-    color:  CornflowerBlue;
-    background-color: white;
-  }
-  .div-line{
-    background-color: white;
-    height: 1px;
-  }
-  
-</style>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/gallery.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-bg-dark">
-    
-<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
+  <body class="d-flex h-100 text-center text-bg-light">
+    <a id="button"></a>
+    <div id="loading-overlay">
+      <div class="spinner"></div>
+    </div>
+    <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">JK</h3>
+      <a href="index.html">
+        <h3 class="float-md-start mb-0">JK</h3>
+        </a>
       
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link fw-bold py-1 px-0" href="index.html">Home</a>
@@ -61,100 +39,245 @@
       </nav>
     </div>
   </header>
-  <!-- Main Section-->
-
-  <main>
-
-    <section class="py-3 text-center container">
+    <div class="wrapper">
+    <section class="parallax-section py-3 text-center" style="background-image: url('assets/img/effects/photo16.png');">
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
           <h1 class="fw-light">WALL OF FACES</h1>
-                    
         </div>
       </div>
     </section>
-    <section>
-    <div class="collage">
-      <div class="photo photo1"></div>
-      <div class="photo photo2"></div>
-      <div class="photo photo3"></div>
-      <div class="photo photo4"></div>
-      <div class="photo photo5"></div>
-      <div class="photo photo6"></div>
-      <div class="photo photo7"></div>
-      <div class="photo photo8"></div>
-      <div class="photo photo9"></div>
-      <div class="photo photo10"></div>
-      <div class="photo photo11"></div>
-      <div class="photo photo12"></div>
-      <div class="photo photo13"></div>
-      <div class="photo photo14"></div>
-      <div class="photo photo15"></div>
-      <div class="photo photo16"></div>
-      <div class="photo photo17"></div>
-      <div class="photo photo18"></div>
-      <div class="photo photo19"></div>
-      <div class="photo photo20"></div>
-      <div class="photo photo21"></div>
-      <div class="photo photo22"></div>
-      <div class="photo photo23"></div>
-      <div class="photo photo24"></div>
-      <div class="photo photo25"></div>
-      <div class="photo photo26"></div>
-      <div class="photo photo27"></div>
-      <div class="photo photo28"></div>
-      <div class="photo photo29"></div>
-      <div class="photo photo30"></div>
-      <div class="photo photo31"></div>
-      <div class="photo photo32"></div>
-      <div class="photo photo33"></div>
-      <div class="photo photo34"></div>
-      <div class="photo photo35"></div>
-      <div class="photo photo36"></div>
-      <div class="photo photo37"></div>
-      <div class="photo photo38"></div>
-      <div class="photo photo39"></div>
-      <div class="photo photo40"></div>
+    <section class="py-3">
+    <div>
+      <ul class="image-gallery">
+        <li>
+          <img src="/assets/img/Gallery/w1.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay" oncontextmenu="return false;"></div>
+        </li>
+        
+        <li>
+          <img src="/assets/img/Gallery/w2.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w3.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w4.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w5.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w6.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w7.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w8.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w9.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w10.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w11.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w12.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay" ></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w13.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w14.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w15.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w16.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w17.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w18.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w19.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w20.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w21.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w22.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w23.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w24.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w25.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w26.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w27.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w28.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w29.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w30.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w31.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w32.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w33.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w34.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w35.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w36.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w37.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w38.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w39.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/w40.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+      </ul>
     </div>
-  </section>
-  <section class="py-3 text-center container">
+</section>
+<!--TOP PORTRAITS-->
+<section class="parallax-section py-3 text-center fade-in" style="background-image: url('assets/img/effects/photo3.png');">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">MY TOP PORTRAITS</h1>
-                  
       </div>
     </div>
   </section>
-  <section>
-    <div class="gallery">
-      <div class="item">
-        <img src="/assets/img/Gallery/t1.jpeg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/t2.jpeg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/t3.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/t4.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/t5.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/t6.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/t7.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/t8.jpg">
-      </div>
-    </div>
-    
-  </section>
-  <section class="py-3 text-center container">
+  <section class="py-3">
+    <div>
+      <ul class="image-gallery">
+        <li>
+          <img src="/assets/img/Gallery/t1.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t2.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t3.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t4.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t5.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t6.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t7.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t8.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t9.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t10.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t11.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/t12.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+    </ul>
+</div>
+</section>
+<!--MY TRAVELS-->
+<section class="parallax-section py-3 text-center" style="background-image: url('assets/img/effects/photo17.png');">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">MY TRAVELS</h1>
@@ -162,95 +285,136 @@
       </div>
     </div>
   </section>
-  <section>
-    <div class="gallery">
-      <div class="item">
-        <img src="/assets/img/Gallery/p1.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/p2.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/p3.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/p4.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/TR1.JPG">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/p10.jpg">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/TR2.JPG">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/TR3.JPG">
-      </div>
-    </div>
-    
-  </section>
-
-  <section class="py-3 text-center container">
+  <section class="py-3">
+    <div>
+      <ul class="image-gallery">
+        <li>
+          <img src="/assets/img/Gallery/p1.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/p2.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/p3.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/p4.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/p5.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+    </ul>
+</div>
+</section>
+<section class="parallax-section py-3 text-center" style="background-image: url('assets/img/effects/photo1.png');">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">EVENTS</h1>
-                  
       </div>
     </div>
   </section>
-  <section>
-    <div class="gallery">
-      <div class="item">
-        <img src="/assets/img/Gallery/E1.JPG">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/E2.JPG">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/E3.JPG">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/E4.JPG">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/E5.JPG">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/E6.JPG">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/E7.JPG">
-      </div>
-      <div class="item">
-        <img src="/assets/img/Gallery/E8.JPG">
-      </div>
-    </div>
-    
-  </section>
-    
-
-
-  <footer class="mt-auto text-white-50">
-    <footer class="text-muted py-5">
-      <div class="container">
-        <p class="float-end mb-1">
-          <a href="#">Back to top</a>
-        </p>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/yourprofile"><i class="fab fa-linkedin-in"></i></a></li>
-          <li><a href="https://github.com/yourusername"><i class="fab fa-github"></i></a></li>
-          <li><a href="https://yourportfolio.com"><i class="fas fa-external-link-alt"></i></a></li>
-        </ul>
-        
-      </div>
-    </footer>
-
+  <section class="py-3">
+    <div>
+      <ul class="image-gallery">
+        <li>
+          <img src="/assets/img/Gallery/E1.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/E2.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/E3.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/E4.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/E5.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/E6.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/E7.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+        <li>
+          <img src="/assets/img/Gallery/E8.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
+          <div class="overlay"></div>
+        </li>
+    </ul>
 </div>
+</section>
+    <footer class="mt-auto text-black-50">
+        <footer class="py-5">
+          <div class="container">
+            <ul>
+              <li><a href="https://www.linkedin.com/in/yourprofile"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://github.com/yourusername"><i class="fab fa-github"></i></a></li>
+              <li><a href="https://yourportfolio.com"><i class="fas fa-external-link-alt"></i></a></li>
+            </ul>
+          </div>
+        </footer>
+      </footer>
+    </div>
+    <script async src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script async src="assets/js/gal.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script>
+      function openImageOverlay(image) {
+        // Create the image overlay element
+        var overlay = document.createElement("div");
+        overlay.classList.add("image-overlay");
+      
+        // Create the image element inside the overlay
+        var overlayImage = document.createElement("img");
+        overlayImage.src = image.src;
+        overlayImage.alt = image.alt;
+        overlay.appendChild(overlayImage);
+      
+        // Add the overlay to the body
+        document.body.appendChild(overlay);
+      
+        // Add the 'active' class to display the overlay
+        overlay.classList.add("active");
+      
+        // Close the overlay when clicked
+        overlay.addEventListener("click", closeImageOverlay);
+      }
+      
+      function closeImageOverlay() {
+        // Remove the overlay from the body
+        var overlay = document.querySelector(".image-overlay");
+        overlay.parentNode.removeChild(overlay);
+      }
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+      document.addEventListener("DOMContentLoaded", function() {
+        const sections = document.querySelectorAll("section");
+      
+        sections.forEach(function(section, index) {
+          setTimeout(function() {
+            section.classList.remove("opacity-0", "translate-y-5");
+            section.classList.add("opacity-100", "translate-y-0");
+          }, index * 500);
+        });
+      });
+    
+    
+    window.onload = function() {
+        // Hide the loading overlay when the page has finished loading
+        document.getElementById("loading-overlay").style.display = "none";
+      };       
+    </script>
   </body>
 </html>

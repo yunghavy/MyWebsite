@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Me</title>
+    <link href="assets/css/contact.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('JpISraUh77WgfEV1o');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('service_ykobpd9', 'template_xh6rqrr', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+      </div>
+      
+      <div class="header-container">
+        <a href="index.html">
+          <h1 class="float-md-start mb-0 logo">JK</h1>
+        </a>
+        <nav>
+          <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </nav>
+      </div>
+    <section id="hire">
+        <h1>Contact Me</h1>
+        <div class="contact-container">
+        <form id="contact-form">
+
+            <div class="field name-box">
+                <input type="text" id="name" name="user_name" placeholder="Who Are You?"/>
+                <label for="name">Name</label>
+            </div>
+
+            <div class="field email-box">
+                <input type="text" id="email" name="user_email" placeholder="name@email.com"/>
+                <label for="email">Email</label>
+            </div>
+            <div class="field msg-box">
+                <textarea id="msg" rows="4" name="message" placeholder="Your message goes here..."/></textarea>
+                <label for="msg">Message</label>
+            </div>
+            <div class="field phone-box">
+                <input type="text" id="contact_number" name="contact_number" placeholder="+254"/>
+                <label for="phone">Phone</label>
+            </div>
+            <input class="button" type="submit" value="Send">
+        </form> 
+    </div>
+</section>
+<script>
+    window.onload = function() {
+        document.getElementById("loading-overlay").style.display = "none";
+      }; 
+</script>
+<script>   
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        document.querySelector('.menu').classList.toggle('show');
+      });
+</script>     
+
+</body>
+</html>

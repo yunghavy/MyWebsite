@@ -4,63 +4,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    
-    
     <title>My Work</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
-
-    
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="manifest" href="assets/img/site.webmanifest">
-  
     <link href="../assets/css/style.css" rel="stylesheet">
-
-<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Custom styles for this template -->
-    <link href="assets/css/store.css" rel="stylesheet">
+    <link href="../assets/css/gallery.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body class="d-flex h-100 text-center text-bg-dark">
+    <!--Spinner loading screen-->
+    <div id="loading-overlay">
+      <div class="spinner"></div>
+    </div>
     
-<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">JK</h3>
+      <a href="index.html">
+        <h3 class="float-md-start mb-0">JK</h3>
+        </a>
       
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="index.html">Home</a>
         <a class="nav-link fw-bold py-1 px-0" href="gallery.html">Gallery</a>
         <a class="nav-link fw-bold py-1 px-0" href="presets.html">Presets</a>
-        <a class="nav-link fw-bold py-1 px-0" href="films.html">Films</a>
+        <a class="nav-link fw-bold py-1 px-0" href="Films.html">Films</a>
       </nav>
     </div>
   </header>
-
  <!-- SLIDESHOW-->
-
-
-<div class="image-container">
-  <img src="/assets/img/Gallery/photo24.jpg" alt="Image 1">
-  <img src="/assets/img/Gallery/photo35.jpg" alt="Image 2">
-  <img src="/assets/img/Gallery/p1.jpg" alt="Image 3">
+  <div class="image-container">
+  <img src="/assets/img/Gallery/w6.jpg" alt="Image 1">
+  <img src="/assets/img/Gallery/w16.jpg" alt="Image 2">
+  <img src="/assets/img/Gallery/p2.jpg" alt="Image 3">
   <img src="/assets/img/Gallery/p3.jpg" alt="Image 4">
-
-</div>
-
-
-    
-  <footer class="mt-auto text-white-50">
-    
+  </div>
+  <footer class="mt-auto text-white-50"> 
   </footer>
 </div>
-
-
-
-
+<script>
+  window.onload = function() {
+    // Hide the loading overlay when the page has finished loading
+    document.getElementById("loading-overlay").style.display = "none";
+  };
+  
+</script>
       <script src="assets/js/main.js"></script>
   </body>
 </html>
