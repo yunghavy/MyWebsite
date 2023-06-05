@@ -20,19 +20,20 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/gallery.css" rel="stylesheet">
     <link href="../assets/css/grid.css" rel="stylesheet">
-
-    <!--TEST-->
-<style>
-
-
-
-</style>
-    <!-- END OF TEST-->
+    <link href="../assets/css/loadingscreen.css" rel="stylesheet">
   </head>
   <body class="d-flex h-100 text-center text-bg-light">
     <a id="button"></a>
-    <div id="loading-overlay">
-      <div class="spinner"></div>
+    <div class="loadingScreen">
+      <h3 class="loadingScreen__text">
+        <span class="loadingScreen__text__span">l</span>
+        <span class="loadingScreen__text__span">o</span>
+        <span class="loadingScreen__text__span">a</span>
+        <span class="loadingScreen__text__span">d</span>
+        <span class="loadingScreen__text__span">i</span>
+        <span class="loadingScreen__text__span">n</span>
+        <span class="loadingScreen__text__span">g</span>
+      </h3>
     </div>
     <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
    <header class="mb-auto">
@@ -46,6 +47,7 @@
         <a class="nav-link fw-bold py-1 px-0 " aria-current="page" href="gallery.html">Gallery</a>
         <a class="nav-link fw-bold py-1 px-0" href="presets.html">Presets</a>
         <a class="nav-link fw-bold py-1 px-0 active" href="films.html">Films</a>
+        <a class="nav-link fw-bold py-1 px-0" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -59,7 +61,7 @@
     </section>
 
     <!--START OF ANIMATED GRID-->
-    <div class="py-3" style="background-image: url('assets/img/effects/photo27.png')">
+    <div class="py-3" style="background-color:#d4e6b5">
       <div class="card" style="background-image: url('https://d21950x0o1sh55.cloudfront.net/assets/home/game-0e307d71d9838e8fbe4927b551f119bcd9e4748f2c2b70c7b81846702996ef94.jpg')">
         <div class="card__content">
           <a href="https://www.youtube.com/watch?v=gPq0iG7vaqQ&t=48s" class="play-button">
@@ -190,60 +192,16 @@
     </div>
   </section>
 <!-- SART OF GRID-->
-<section class="videos" id="featured-videos" style="background-image: url('assets/img/effects/photo27.png')">
-  <div class="video-grid front-page" id="front-page-videos">
-    <ul class="video-list featured">
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/r4hbRySVpnM?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/r4hbRySVpnM/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>Shax Payne - Final Warning</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/4ssZtqFppcs?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/4ssZtqFppcs/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>34Tavo - Oya Oya</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/zW7WcXJKWBo?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/zW7WcXJKWBo/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>Jayhudii ft 12Piece - Westside</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/6bD7h6sIpxs?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/6bD7h6sIpxs/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>Alma Ras - Daydreamer</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/45lOuApDDkU?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/45lOuApDDkU/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>12 Piece - No chorus</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/XQHKScuRgUo?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/XQHKScuRgUo/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>Memphis Roadmen - East</figcaption>
-          </figure>
-        </a>
-      </li>
-    </ul>
-  </div
-</section>
+<div style="background-color:#d4e6b5">
+<ul class="youtube_videos py-2">
+  <li class="youtube" id="r4hbRySVpnM"></li>
+  <li class="youtube" id="4ssZtqFppcs"></li>
+  <li class="youtube" id="zW7WcXJKWBo"></li>
+  <li class="youtube" id="6bD7h6sIpxs"></li>
+  <li class="youtube" id="45lOuApDDkU"></li>
+  <li class="youtube" id="XQHKScuRgUo"></li>
+</ul>
+</div>
 <!-- END OF GRID-->
 <section class="parallax-section py-3 text-center" style="background-image: url('assets/img/effects/photo20.png');">
     <div class="row py-lg-5">
@@ -254,60 +212,16 @@
     </div>
   </section>
   <!-- SART OF GRID-->
-<section class="videos" id="featured-videos" style="background-image: url('assets/img/effects/photo27.png')">
-  <div class="video-grid front-page" id="front-page-videos">
-    <ul class="video-list featured">
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/Pq0iG7vaqQ?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/Pq0iG7vaqQ/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>Amnesia</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/IZ9AG4UqrM0?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/IZ9AG4UqrM0/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>Pekee Yangu</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/E0xu2BPETqA?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/E0xu2BPETqA/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>Bad is Bad</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/SONljLNmyXk?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/SONljLNmyXk/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>The Untouched</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/cAIdbuuYv2s?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/cAIdbuuYv2s/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>Juice - Red Flag</figcaption>
-          </figure>
-        </a>
-      </li>
-      <li class="video featured">
-        <a data-fancybox href="https://www.youtube.com/embed/A8tc5_NV_BA?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-          <figure style="background-image: url(https://img.youtube.com/vi/A8tc5_NV_BA/hqdefault.jpg);">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-            <figcaption>The Wol</figcaption>
-          </figure>
-        </a>
-      </li>
-    </ul>
-  </div
-</section>
+  <div style="background-color:#d4e6b5">
+  <ul class="youtube_videos py-2">
+    <li class="youtube" id="gPq0iG7vaqQ"></li>
+    <li class="youtube" id="IZ9AG4UqrM0"></li>
+    <li class="youtube" id="E0xu2BPETqA"></li>
+    <li class="youtube" id="SONljLNmyXk"></li>
+    <li class="youtube" id="cAIdbuuYv2s"></li>
+    <li class="youtube" id="A8tc5_NV_BA"></li>
+  </ul>
+</div>
 <section class="parallax-section py-3 text-center" style="background-image: url('assets/img/effects/photo23.png');">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
@@ -316,44 +230,13 @@
     </div>
   </section>
   <!-- Start-->
-  <section class="videos" id="featured-videos" style="background-image: url('assets/img/effects/photo27.png')">
-    <div class="video-grid front-page" id="front-page-videos">
-      <ul class="video-list featured">
-        <li class="video featured">
-          <a data-fancybox href="https://www.instagram.com/reel/Ckq1nXvNvA6/?igshid=NTc4MTIwNjQ2YQ==?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-            <figure style="background-image: url(https://img.youtube.com/vi/Pq0iG7vaqQ/hqdefault.jpg);">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-              <figcaption>Mike Mwa</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li class="video featured">
-          <a data-fancybox href="https://www.instagram.com/reel/CdBLdpCgXNW/?igshid=NTc4MTIwNjQ2YQ==?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-            <figure style="background-image: url(https://img.youtube.com/vi/IZ9AG4UqrM0/hqdefault.jpg);">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-              <figcaption>Alvin Bisonga</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li class="video featured">
-          <a data-fancybox href="https://www.instagram.com/tv/CVj06vYq8eS/?igshid=NTc4MTIwNjQ2YQ==?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-            <figure style="background-image: url(https://img.youtube.com/vi/E0xu2BPETqA/hqdefault.jpg);">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-              <figcaption>Nelson Kidla</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li class="video featured">
-          <a data-fancybox href="https://www.instagram.com/tv/CJHKSmlhFZE/?igshid=NTc4MTIwNjQ2YQ==?autoplay=1&controls=0&showinfo=0&color=white&rel=0" class="featured-video">
-            <figure style="background-image: url(https://img.youtube.com/vi/E0xu2BPETqA/hqdefault.jpg);">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/video-thumb-placeholder-16-9.png" />
-              <figcaption>Lilah Nyokabi</figcaption>
-            </figure>
-          </a>
-        </li>
-      </ul>
-      </div
-    </section>
+  <div style="background-color:#d4e6b5">
+    <ul class="instagram_videos py-2">
+      <li class="instagram" id="4L3f9DERUmY"></li>
+      <li class="instagram" id="P4nHrtJQGPs"></li>
+      <li class="instagram" id="Cewp652t73c"></li>
+    </ul>
+  </div>
   <!-- End-->
   <section class="parallax-section py-3 text-center" style="background-image: url('assets/img/effects/photo26.png');">
     <div class="row py-lg-5">
@@ -363,11 +246,13 @@
     </div>
   </section>
   <!-- Start-->
+  <div style="background-color:#d4e6b5">
   <ul class="youtube_videos py-2">
-    <li class="youtube" id="WYz2jZ_BYnI"></li>
-    <li class="youtube" id="BzRQ8A8GUic"></li>
-    <li class="youtube" id="xyudg-n9wnE"></li>
+    <li class="youtube" id="4L3f9DERUmY"></li>
+    <li class="youtube" id="P4nHrtJQGPs"></li>
+    <li class="youtube" id="Cewp652t73c"></li>
   </ul>
+</div>
   <!-- End-->
   <section class="parallax-section py-3 text-center" style="background-image: url('assets/img/effects/photo25.png');">
     <div class="row py-lg-5">
@@ -432,17 +317,12 @@
         </div>
       </div>
     </div>
+    
     <script async src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script async src="assets/js/gal.js"></script>
+    <script async src="assets/js/loadingscreen.js"></script>
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script>
-    window.onload = function() {
-        // Hide the loading overlay when the page has finished loading
-        document.getElementById("loading-overlay").style.display = "none";
-      };       
-    </script>
-    <script>
-      // inspiration: https://www.valerian.bnpparibas/en
 
 // tilt.js
 

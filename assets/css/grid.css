@@ -364,3 +364,70 @@ html { box-sizing: border-box; height: 100%; overflow-y: scroll; font-size: 62.5
 @media (min-width:768px) and (max-width:979px) {}
 
 
+/* Instagram videos */
+.instagram_videos{
+  list-style:none;
+  margin:0 auto;
+  display:block;
+  padding:0;
+}
+.instagram_videos .instagram{
+  display:inline-block;
+  margin-bottom:1em;
+  margin-right:0.5em;
+  margin-left:0.5em;
+  margin-top:0;
+  
+}
+.instagram,.thumb{
+  width:380px;
+  height:250px;
+  cursor:pointer;
+  position:relative;
+  -webkit-box-shadow:0 0.5px 2px #1D242B;
+  -moz-box-shadow:0 0.5px 2px #1D242B;
+  box-shadow:0 0.5px 2px #1D242B;
+}
+.instagram_video{
+  width:385px;
+  height:250px;
+}
+.thumb,.instagram_video{
+  padding:5px;
+  background:#34495e;
+  border:0;
+  outline:0;
+}
+.instagram:after{
+  content:"PLAY THIS VIDEO";
+  position:absolute;
+  top:5px;
+  left:5px;
+  width:370px;
+  height:240px;
+  padding:0;
+  margin:0;
+  padding:5px;
+  background:rgba(38, 180, 174, 0.66);
+  text-align:center;
+  line-height:250px;
+  font-family:'Racing Sans One', cursive;
+  color:transparent;
+  -webkit-transition:all 0.8s ease;
+  -moz-transition:all 0.8s ease;
+  -o-transition:all 0.8s ease;
+  transition:all 0.8s ease;
+}
+.instagram:hover:after{
+  top:110px;
+  left:110px;
+  width:165px;
+  height:40px;
+  line-height:40px;
+  background:#34495e;
+  -webkit-transition:all 0.8s ease;
+  -moz-transition:all 0.8s ease;
+  -o-transition:all 0.8s ease;
+  transition:all 0.8s ease;
+  color:#ecf0f1;
+}

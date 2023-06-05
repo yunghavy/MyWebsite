@@ -12,12 +12,20 @@
     <link rel="manifest" href="assets/img/site.webmanifest">
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/gallery.css" rel="stylesheet">
+    <link href="../assets/css/loadingscreen.css" rel="stylesheet">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body class="d-flex h-100 text-center text-bg-dark">
-    <!--Spinner loading screen-->
-    <div id="loading-overlay">
-      <div class="spinner"></div>
+    <div class="loadingScreen">
+      <h3 class="loadingScreen__text">
+        <span class="loadingScreen__text__span">l</span>
+        <span class="loadingScreen__text__span">o</span>
+        <span class="loadingScreen__text__span">a</span>
+        <span class="loadingScreen__text__span">d</span>
+        <span class="loadingScreen__text__span">i</span>
+        <span class="loadingScreen__text__span">n</span>
+        <span class="loadingScreen__text__span">g</span>
+      </h3>
     </div>
     
   <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -45,13 +53,8 @@
   <footer class="mt-auto text-white-50"> 
   </footer>
 </div>
-<script>
-  window.onload = function() {
-    // Hide the loading overlay when the page has finished loading
-    document.getElementById("loading-overlay").style.display = "none";
-  };
-  
-</script>
+
       <script src="assets/js/main.js"></script>
+      <script src="assets/js/loadingscreen.js"></script>
   </body>
 </html>

@@ -1,73 +1,407 @@
-<!doctype html>
-<html lang="en" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Presets</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+        <link rel="manifest" href="assets/img/site.webmanifest">
+        <link rel="stylesheet" href="assets/css/testy.css">
+        <link rel="stylesheet" href="assets/css/loadingscreen.css">
+        <style>
+        
+            .scroll-animations-example {
+                > .scrollsection {
+                    padding: 10vh 10vh 10vh 10vmax;
+                    min-width: 550vh;
+                }
+            
+                > .scrollsection > .item {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 -30vh 0 3vh;
+                }
+            
+                > .scrollsection > .item::before {
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+            
+                > .scrollsection > .item.-big {
+                    height: 80vh;
+                    width: 60vh;
+                }
+            
+                > .scrollsection > .item.-big.-horizontal {
+                    height: 60vh;
+                    width: 80vh;
+                }
+            
+                > .scrollsection > .item.-normal {
+                    height: 60vh;
+                    width: 45vh;
+                    z-index: 1;
+                }
+            
+                > .scrollsection > .item.-normal.-horizontal {
+                    height: 45vh;
+                    width: 60vh;
+                }
+            
+                > .scrollsection > .item.-normal:nth-of-type(3n) {
+                    bottom: 5vh;
+                }
+            
+                > .scrollsection > .item.-normal:nth-of-type(4n) {
+                    bottom: -5vh;
+                }
+            
+                > .scrollsection > .item.-small {
+                    height: 40vh;
+                    width: 30vh;
+                    z-index: 2;
+                }
+            
+                > .scrollsection > .item.-small.-horizontal {
+                    height: 30vh;
+                    width: 40vh;
+                }
+            
+                > .scrollsection > .item.-small:nth-of-type(3n) {
+                    bottom: 13vh;
+                }
+            
+                > .scrollsection > .item.-small:nth-of-type(4n) {
+                    bottom: -13vh;
+                }
+            
+                > .scrollsection > .item > .image {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    filter: grayscale(1);
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translateX(0) translateY(0) scale(1);
+                    transition: filter .3s ease,
+                        opacity 1s ease,
+                        transform 1s ease;
+                }
+            
+                > .scrollsection > .item:nth-of-type(4n) > .image {
+                    transform: translateX(-30vh) translateY(-30vh) scale(.8);
+                    transition-delay: 0;
+                }
+            
+                > .scrollsection > .item:nth-of-type(4n - 1) > .image {
+                    transform: translateX(30vh) translateY(30vh) scale(.8);
+                    transition-delay: .05s;
+                }
+            
+                > .scrollsection > .item:nth-of-type(4n - 2) > .image {
+                    transform: translateX(-30vh) translateY(30vh) scale(.8);
+                    transition-delay: .1s;
+                }
+            
+                > .scrollsection > .item:nth-of-type(4n - 3) > .image {
+                    transform: translateX(-30vh) translateY(-30vh) scale(.8);
+                    transition-delay: .15s;
+                }
+            
+                > .scrollsection > .item > .image.-active {
+                    transform: translateX(0) translateY(0) scale(1);
+                    opacity: .8;
+                    pointer-events: auto;
+                    transition: filter .3s ease,
+                        opacity 1s ease,
+                        transform 1s ease;
+                }
+            
+                > .scrollsection > .item > .image.-clicked {
+                    transform: translateX(0) translateY(0) scale(5);
+                    opacity: 0;
+                    pointer-events: auto;
+                    transition: filter .3s ease,
+                        opacity 1s ease,
+                        transform 1s ease;
+                }
+            
+                > .scrollsection > .item > .image.-active:hover {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    filter: grayscale(0);
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+            
     
-    
-    <title>Presets</title>
+        </style> 
+    </head>
+    <body>
+      <!--loading screen-->
+      <div class="loadingScreen">
+        <h3 class="loadingScreen__text">
+          <span class="loadingScreen__text__span">l</span>
+          <span class="loadingScreen__text__span">o</span>
+          <span class="loadingScreen__text__span">a</span>
+          <span class="loadingScreen__text__span">d</span>
+          <span class="loadingScreen__text__span">i</span>
+          <span class="loadingScreen__text__span">n</span>
+          <span class="loadingScreen__text__span">g</span>
+        </h3>
+      </div>
+      <!--end-->
+        <section id="top">
+            <img src="https://aryan-tayal.github.io/Mountains-Parallax/bg.jpg" id="bg" />
+            <h2 id="text">Presets</h2>
+            <img src="https://aryan-tayal.github.io/Mountains-Parallax/man.png" id="man" />
+            <img src="https://aryan-tayal.github.io/Mountains-Parallax/clouds_1.png" id="clouds_1" />
+            <img src="https://aryan-tayal.github.io/Mountains-Parallax/clouds_2.png" id="clouds_2" />
+            <img src="https://aryan-tayal.github.io/Mountains-Parallax/mountain_left.png" id="mountain_left" />
+            <img src="https://aryan-tayal.github.io/Mountains-Parallax/mountain_right.png
+      " id="mountain_right" />
+          </section>
+          <section id="sec">
+            <h2>Color grading made powerful</h2>
+          </section>
+          <!--End of section-->
+          <section>
+          <div class='scroll-animations-example' data-scroll-container>
+            <div class='scrollsection' data-scroll-section>
+                <div class='item -normal' data-scroll data-scroll-speed="2">
+                    <img class='image' src='https://picsum.photos/id/1005/300/400' oncontextmenu="return false;">
+                </div>
+                <div class='item -big' data-scroll data-scroll-speed="1">
+                    <img class='image' src='https://picsum.photos/id/1019/600/800' oncontextmenu="return false;">
+                </div>
+                <div class='item -small -horizontal' data-scroll data-scroll-speed="4">
+                    <img class='image' src='https://picsum.photos/id/1027/400/300' oncontextmenu="return false;">
+                </div>
+                <div class='item -normal' data-scroll data-scroll-speed="3">
+                    <img class='image' src='https://picsum.photos/id/1028/300/400' oncontextmenu="return false;">
+                </div>
+                <div class='item -normal -horizontal' data-scroll data-scroll-speed="2">
+                    <img class='image' src='https://picsum.photos/id/1041/400/300' oncontextmenu="return false;">
+                </div>
+                <div class='item -big -horizontal' data-scroll data-scroll-speed="4">
+                    <img class='image' src='https://picsum.photos/id/1042/800/600' oncontextmenu="return false;">
+                </div>
+                <div class='item -small' data-scroll data-scroll-speed="2">
+                    <img class='image' src='https://picsum.photos/id/1049/300/400' oncontextmenu="return false;">
+                </div>
+                <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
+                    <img class='image' src='https://picsum.photos/id/1056/300/400' oncontextmenu="return false;">
+                </div>
+                <div class='item -small -horizontal' data-scroll data-scroll-speed="3">
+                    <img class='image' src='https://picsum.photos/id/1062/400/300' oncontextmenu="return false;">
+                </div>
+                <div class='item -big' data-scroll data-scroll-speed="1">
+                    <img class='image' src='https://picsum.photos/id/1068/600/800' oncontextmenu="return false;">
+                </div>
+                
+                <div class='item -normal -horizontal' data-scroll data-scroll-speed="2">
+                    <img class='image' src='https://picsum.photos/id/1069/400/300' oncontextmenu="return false;">
+                </div>
+                <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
+                    <img class='image' src='https://picsum.photos/id/1072/300/400' oncontextmenu="return false;">
+                </div>
+                <div class='item -small -horizontal' data-scroll data-scroll-speed="4">
+                    <img class='image' src='https://picsum.photos/id/1075/400/300' oncontextmenu="return false;">
+                </div>
+                <div class='item -big' data-scroll data-scroll-speed="3">
+                    <img class='image' src='https://picsum.photos/id/1081/600/800' oncontextmenu="return false;">
+                </div>
+                <div class='item -normal -horizontal' data-scroll data-scroll-speed="2">
+                    <img class='image' src='https://picsum.photos/id/111/400/300' oncontextmenu="return false;">
+                </div>
+                <div class='item -small -horizontal' data-scroll data-scroll-speed="4">
+                    <img class='image' src='https://picsum.photos/id/129/400/300' oncontextmenu="return false;">
+                </div>
+                <div class='item -big' data-scroll data-scroll-speed="2">
+                    <img class='image' src='https://picsum.photos/id/137/600/800' oncontextmenu="return false;">
+                </div>
+                <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
+                    <img class='image' src='https://picsum.photos/id/141/300/400' oncontextmenu="return false;">
+                </div>
+                <div class='item -small -horizontal' data-scroll data-scroll-speed="3">
+                    <img class='image' src='https://picsum.photos/id/145/400/300' oncontextmenu="return false;">
+                </div>
+                <div class='item -normal' data-scroll data-scroll-speed="1">
+                    <img class='image' src='https://picsum.photos/id/147/300/400' oncontextmenu="return false;">
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- End of section-->
+        <main class="flex__col">
+            <nav class="menu flex">
+              <a href="#" class="menu__left">
+                JK
+              </a>
+              <ul class="menu__right flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="films.html">Films</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <section class="intro flex">
+              <h1>EDIT YOUR CAMERA PHOTOS WITH"<br/>"ONE CLICK</h1>
+              <img src="https://images.unsplash.com/photo-1574717025058-2f8737d2e2b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWRpdGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+              <p class="display-6" style="color: #1A5F7A">
+                "Editing is like sculpting. You chip away at the excess until you reveal the essence." - Sidney Lumet
+              </p>
+            </section>
+            <section class="list flex__col">
+              <div class="list__item flex">
+                <img src="https://images.unsplash.com/photo-1528109966604-5a6a4a964e8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHZpZGVvJTIwbHV0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
+                <div class="list__item__title">Video Luts</div>
+                <div class="list__item__titleOutline">Video Luts</div>
+                <ul class="list__item__infos flex">
+                  <li><span>TOOLS FOR</span> ADOBE PREMIER</li>
+                  <li><span>YEAR</span> 2023</li>
+                </ul>
+                <div class="list__item__type">VIDEO</div>
+                <div class="list__item__project">LUTS</div>
+              </div>
+            </div>
+              <div class="list__item flex">
+                <img src="https://images.unsplash.com/photo-1524103416206-a67f05a8154b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80">
+                <div class="list__item__title">Sound Packs</div>
+                <div class="list__item__titleOutline">Sound Packs</div>
+                <ul class="list__item__infos flex">
+                  <li><span>KILLER</span> SOUNDS</li>
+                  <li><span>YEAR</span> 2023</li>
+                </ul>
+                <div class="list__item__type">SOUND</div>
+                <div class="list__item__project">PACKS</div>
+              </div>
+            </div>
+              <div class="list__item flex">
+                <img src="https://images.unsplash.com/photo-1676591754547-deb636399be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBob3RvJTIwcHJlc2V0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+                <div class="list__item__title">Photo Presets</div>
+                <div class="list__item__titleOutline">Photo Presets</div>
+                <ul class="list__item__infos flex">
+                  <li><span>PACKS FOR</span> LIGHTROOM CC</li>
+                  <li><span>YEAR</span> 2023</li>
+                </ul>
+                <div class="list__item__type">PHOTO</div>
+                <div class="list__item__project">PRESETS</div>
+              </div>
+            </div>
+          </main>
+          <!-- end -->
+          <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+          <div class="footer">
+            <h2 class="display-4 text-center">Follow</h2>
+            <div class="social-icons">
+              <a class="social-button facebook" href="https://facebook.com/jafferkimutai" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a class="social-button twitter" href="https://twitter.com/jafferkimutai" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a class="social-button linkedin" href="https://www.linkedin.com/in/jafferkimutai/" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a class="social-button youtube" href="https://www.youtube.com/siccfrequencies" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a class="social-button instagram" href="https://instagram.com/jafferkimutai" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
-
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/site.webmanifest">
-  
-    <link href="style.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-
-
-<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="assets/css/store.css" rel="stylesheet">
-    <link href="assets/css/presets.css" rel="stylesheet">
-    
-  </head>
-  <body class="d-flex h-100 text-center text-bg-dark">
-    <div id="loading-overlay">
-      <div class="spinner"></div>
-    </div>
-    
-<div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <a href="index.html">
-        <h3 class="float-md-start mb-0">JK</h3>
-        </a>
+        <script src="assets/js/testy.js" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+        <script src="assets/js/loadingscreen.js" async defer></script>
       
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0" href="index.html">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="gallery.html">Gallery</a>
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="presets.html"><strike>Presets</strike></a>
-        <a class="nav-link fw-bold py-1 px-0" href="films.html">Films</a>
-      </nav>
-    </div>
-  </header>
-  <section>
-      <h2> COMING SOON </h2>
-  </section>
+        <script>
+            class Example {
+                constructor(options) {
+                    this.root = options.root;
+            
+                    this.init();
+            
+                    setTimeout(this.showImages.bind(this), 1000);
+                }
+            
+                init() {
+                    this.scroll = new LocomotiveScroll({
+                        el: this.root,
+                        direction: 'horizontal',
+                        smooth: true,
+                        lerp: 0.05,
+                        tablet: {
+                            smooth: true
+                        },
+                        smartphone: {
+                            smooth: true
+                        }
+                    });
+            
+                    this.images = this.root.querySelectorAll('.image');
+            
+                    [].forEach.call(this.images, (image) => {
+                        image.addEventListener('click', () => {
+                            image.classList.add('-clicked');
+                            this.hideImages();
+                        });
+                    });
+                }
+            
+                showImages() {
+                    [].forEach.call(this.images, (image) => {
+                        image.classList.remove('-clicked');
+                        image.classList.add('-active');
+                    });
+                }
+            
+                hideImages() {
+                    [].forEach.call(this.images, (image) => {
+                        image.classList.remove('-active');
+                    });
+            
+                    setTimeout(this.showImages.bind(this), 2000);
+                }
+            }
+            
+            
+            window.addEventListener('DOMContentLoaded', (event) => {
+                const example = new Example({
+                    root: document.querySelector('.scroll-animations-example')
+                });
+            });
 
+            // start
+            var items = document.querySelectorAll(".list__item")
 
-  <footer class="mt-auto text-white-50">
-    
-  </footer>
-</div>
-
-<script src="assets/js/main.js"></script>
-<script>
-  window.onload = function() {
-    // Hide the loading overlay when the page has finished loading
-    document.getElementById("loading-overlay").style.display = "none";
-  };
-</script>
-
-
-  </body>
+items.forEach(item => {
+  var itemTitle = item.querySelector(".list__item__title")
+  var itemTitleOutline = item.querySelector(".list__item__titleOutline")
+  var itemImg = item.querySelector(".list__item img")
+  
+  var itemTL = gsap.timeline({scrollTrigger: {
+    trigger: item,
+    start: "0% 75%",
+    end: "25% 50%",
+    scrub: 3,
+  }})
+  
+  itemTL.fromTo(itemTitle, {scale: 2, y: "100%"}, {scale: 1, y: "0%", ease: "power2.inOut"}, 0)
+  itemTL.fromTo(itemTitleOutline, {scale: 2, y: "100%"}, {scale: 1, y: "0%", ease: "power2.inOut"}, 0)
+  
+  gsap.fromTo(itemImg, {x: "60vw", y : "60vh", rotate: -30}, {x: "-60vw", y: "-60vh", rotate: 30, ease: "none", scrollTrigger: {
+    trigger: item,
+    start: "50% 100%",
+    end: "100% 50%",
+    scrub: 3,
+  }})
+})
+        </script>
+        
+    </body>
 </html>

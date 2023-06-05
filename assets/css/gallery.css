@@ -28,6 +28,8 @@
       flex-direction: row;
     }
   }
+ 
+
 
   /* Hover effect for the gallery images */
 .image-gallery li {
@@ -333,6 +335,9 @@ hr{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#overlay img {
+  pointer-events: none; /* Disable pointer events on the image */
 }
 
 /* Button style */

@@ -18,11 +18,21 @@
 
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/gallery.css" rel="stylesheet">
+    <link href="../assets/css/loadingscreen.css" rel="stylesheet">
+   
   </head>
   <body class="d-flex h-100 text-center text-bg-light">
     <a id="button"></a>
-    <div id="loading-overlay">
-      <div class="spinner"></div>
+    <div class="loadingScreen">
+      <h3 class="loadingScreen__text">
+        <span class="loadingScreen__text__span">l</span>
+        <span class="loadingScreen__text__span">o</span>
+        <span class="loadingScreen__text__span">a</span>
+        <span class="loadingScreen__text__span">d</span>
+        <span class="loadingScreen__text__span">i</span>
+        <span class="loadingScreen__text__span">n</span>
+        <span class="loadingScreen__text__span">g</span>
+      </h3>
     </div>
     <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
    <header class="mb-auto">
@@ -36,6 +46,7 @@
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="gallery.html">Gallery</a>
         <a class="nav-link fw-bold py-1 px-0" href="presets.html">Presets</a>
         <a class="nav-link fw-bold py-1 px-0" href="films.html">Films</a>
+        <a class="nav-link fw-bold py-1 px-0" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -47,12 +58,12 @@
         </div>
       </div>
     </section>
-    <section class="py-3">
+    <section class="py-3" style="background-color:#F9F5F6">
     <div>
       <ul class="image-gallery">
         <li>
           <img src="/assets/img/Gallery/w1.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
-          <div class="overlay" oncontextmenu="return false;"></div>
+          <div class="overlay"></div>
         </li>
         
         <li>
@@ -203,14 +214,6 @@
           <img src="/assets/img/Gallery/w38.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
           <div class="overlay"></div>
         </li>
-        <li>
-          <img src="/assets/img/Gallery/w39.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
-          <div class="overlay"></div>
-        </li>
-        <li>
-          <img src="/assets/img/Gallery/w40.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
-          <div class="overlay"></div>
-        </li>
       </ul>
     </div>
 </section>
@@ -222,7 +225,7 @@
       </div>
     </div>
   </section>
-  <section class="py-3">
+  <section class="py-3" style="background-color:#F9F5F6">
     <div>
       <ul class="image-gallery">
         <li>
@@ -254,10 +257,6 @@
           <div class="overlay"></div>
         </li>
         <li>
-          <img src="/assets/img/Gallery/t8.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
-          <div class="overlay"></div>
-        </li>
-        <li>
           <img src="/assets/img/Gallery/t9.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
           <div class="overlay"></div>
         </li>
@@ -267,10 +266,6 @@
         </li>
         <li>
           <img src="/assets/img/Gallery/t11.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
-          <div class="overlay"></div>
-        </li>
-        <li>
-          <img src="/assets/img/Gallery/t12.jpg" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
           <div class="overlay"></div>
         </li>
     </ul>
@@ -285,7 +280,7 @@
       </div>
     </div>
   </section>
-  <section class="py-3">
+  <section class="py-3" style="background-color:#F9F5F6">
     <div>
       <ul class="image-gallery">
         <li>
@@ -318,7 +313,7 @@
       </div>
     </div>
   </section>
-  <section class="py-3">
+  <section class="py-3" style="background-color:#F9F5F6">
     <div>
       <ul class="image-gallery">
         <li>
@@ -337,39 +332,13 @@
           <img src="/assets/img/Gallery/E4.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
           <div class="overlay"></div>
         </li>
-        <li>
-          <img src="/assets/img/Gallery/E5.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
-          <div class="overlay"></div>
-        </li>
-        <li>
-          <img src="/assets/img/Gallery/E6.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
-          <div class="overlay"></div>
-        </li>
-        <li>
-          <img src="/assets/img/Gallery/E7.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
-          <div class="overlay"></div>
-        </li>
-        <li>
-          <img src="/assets/img/Gallery/E8.JPG" alt="" onclick="openImageOverlay(this)" oncontextmenu="return false;"/>
-          <div class="overlay"></div>
-        </li>
     </ul>
 </div>
 </section>
-    <footer class="mt-auto text-black-50">
-        <footer class="py-5">
-          <div class="container">
-            <ul>
-              <li><a href="https://www.linkedin.com/in/yourprofile"><i class="fab fa-linkedin-in"></i></a></li>
-              <li><a href="https://github.com/yourusername"><i class="fab fa-github"></i></a></li>
-              <li><a href="https://yourportfolio.com"><i class="fas fa-external-link-alt"></i></a></li>
-            </ul>
-          </div>
-        </footer>
-      </footer>
-    </div>
+
     <script async src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script async src="assets/js/gal.js"></script>
+    <script async src="assets/js/loadingscreen.js"></script>
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script>
       function openImageOverlay(image) {
@@ -410,11 +379,15 @@
         });
       });
     
-    
-    window.onload = function() {
-        // Hide the loading overlay when the page has finished loading
-        document.getElementById("loading-overlay").style.display = "none";
-      };       
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+      });
+      
+      // Prevent image drag and drop
+      document.addEventListener('dragstart', function (e) {
+        e.preventDefault();
+      });
+       
     </script>
   </body>
 </html>

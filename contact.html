@@ -13,87 +13,74 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="manifest" href="assets/img/site.webmanifest">
-
-    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('JpISraUh77WgfEV1o');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('service_ykobpd9', 'template_xh6rqrr', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
+<style>
+  
+</style>
 </head>
 <body>
-    <div id="loading-overlay">
-        <div class="spinner"></div>
-      </div>
-      
-      <div class="header-container">
-        <a href="index.html">
-          <h1 class="float-md-start mb-0 logo">JK</h1>
+    <nav class="menu flex">
+        <a href="index.html" class="menu__left">
+          JK
         </a>
-        <nav>
-          <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-          <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-          </ul>
-        </nav>
-      </div>
+        <ul class="menu__right flex">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="presets.html">Presets</a></li>
+          <li><a href="films.html">Films</a></li>
+          
+        </ul>
+      </nav>
     <section id="hire">
         <h1>Contact Me</h1>
         <div class="contact-container">
         <form id="contact-form">
 
             <div class="field name-box">
-                <input type="text" id="name" name="user_name" placeholder="Who Are You?"/>
+                <input type="text" id="name" name="user_name" placeholder="Who Are You?" required>
                 <label for="name">Name</label>
             </div>
 
             <div class="field email-box">
-                <input type="text" id="email" name="user_email" placeholder="name@email.com"/>
+                <input type="text" id="email" name="user_email" placeholder="name@email.com" required/>
                 <label for="email">Email</label>
+                <span id="email-error" class="error-message"></span>
             </div>
             <div class="field msg-box">
-                <textarea id="msg" rows="4" name="message" placeholder="Your message goes here..."/></textarea>
+                <textarea id="msg" rows="4" name="message" placeholder="Your message goes here..." required/></textarea>
                 <label for="msg">Message</label>
             </div>
             <div class="field phone-box">
-                <input type="text" id="contact_number" name="contact_number" placeholder="+254"/>
+                <input type="text" id="contact_number" name="contact_number" placeholder="+254" required/>
                 <label for="phone">Phone</label>
+                <span id="phone-error" class="error-message"></span>
             </div>
             <input class="button" type="submit" value="Send">
-        </form> 
+        </form>
+        <div id="result"></div>
     </div>
 </section>
-<script>
-    window.onload = function() {
-        document.getElementById("loading-overlay").style.display = "none";
-      }; 
+<script type="text/javascript" src="assets/js/contact.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('JpISraUh77WgfEV1o');
+    })();
 </script>
-<script>   
-    document.querySelector('.hamburger').addEventListener('click', function() {
-        document.querySelector('.menu').classList.toggle('show');
-      });
-</script>     
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            this.contact_number.value = Math.random() * 100000 | 0;
+            emailjs.sendForm('service_ykobpd9', 'template_xh6rqrr', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
 
+</script>
 </body>
 </html>
