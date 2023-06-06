@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 *{
 margin: 0;
@@ -64,26 +65,6 @@ color:#1A5F7A;
 }
 
 
-/* footer */
-.footer {
-    background-color: #0077be; /* Ocean blue background color */
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .social-icons {
-    margin-top: 10px;
-  }
-  
-  .social-button {
-    color: #fff;
-    font-size: 24px;
-    margin-right: 10px;
-  }
-  
-  .social-button:hover {
-    opacity: 0.8;
-  }
 
 /* start */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -323,11 +304,6 @@ color:#1A5F7A;
       display: none; /* Hide the sidebar on tablets */
     }
     
-    .footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%; /* Make the footer span the full width */
-    }
 }
 
 /* For screens larger than 1023px (desktop) */
@@ -364,10 +340,140 @@ color:#1A5F7A;
   .sidebar {
     display: block; /* Show the sidebar on desktop */
   }
-  
-  .footer {
-    position: relative;
-    bottom: initial;
-    width: auto; /* Reset the footer width to its original size */
-  }
+
 }   
+
+
+  .scroll-animations-example {
+                > .scrollsection {
+                    padding: 10vh 10vh 10vh 10vmax;
+                    min-width: 550vh;
+                }
+            
+                > .scrollsection > .item {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 -30vh 0 3vh;
+                }
+            
+                > .scrollsection > .item::before {
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+            
+                > .scrollsection > .item.-big {
+                    height: 80vh;
+                    width: 60vh;
+                }
+            
+                > .scrollsection > .item.-big.-horizontal {
+                    height: 60vh;
+                    width: 80vh;
+                }
+            
+                > .scrollsection > .item.-normal {
+                    height: 60vh;
+                    width: 45vh;
+                    z-index: 1;
+                }
+            
+                > .scrollsection > .item.-normal.-horizontal {
+                    height: 45vh;
+                    width: 60vh;
+                }
+            
+                > .scrollsection > .item.-normal:nth-of-type(3n) {
+                    bottom: 5vh;
+                }
+            
+                > .scrollsection > .item.-normal:nth-of-type(4n) {
+                    bottom: -5vh;
+                }
+            
+                > .scrollsection > .item.-small {
+                    height: 40vh;
+                    width: 30vh;
+                    z-index: 2;
+                }
+            
+                > .scrollsection > .item.-small.-horizontal {
+                    height: 30vh;
+                    width: 40vh;
+                }
+            
+                > .scrollsection > .item.-small:nth-of-type(3n) {
+                    bottom: 13vh;
+                }
+            
+                > .scrollsection > .item.-small:nth-of-type(4n) {
+                    bottom: -13vh;
+                }
+            
+                > .scrollsection > .item > .image {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    filter: grayscale(1);
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translateX(0) translateY(0) scale(1);
+                    transition: filter .3s ease,
+                        opacity 1s ease,
+                        transform 1s ease;
+                }
+            
+                > .scrollsection > .item:nth-of-type(4n) > .image {
+                    transform: translateX(-30vh) translateY(-30vh) scale(.8);
+                    transition-delay: 0;
+                }
+            
+                > .scrollsection > .item:nth-of-type(4n - 1) > .image {
+                    transform: translateX(30vh) translateY(30vh) scale(.8);
+                    transition-delay: .05s;
+                }
+            
+                > .scrollsection > .item:nth-of-type(4n - 2) > .image {
+                    transform: translateX(-30vh) translateY(30vh) scale(.8);
+                    transition-delay: .1s;
+                }
+            
+                > .scrollsection > .item:nth-of-type(4n - 3) > .image {
+                    transform: translateX(-30vh) translateY(-30vh) scale(.8);
+                    transition-delay: .15s;
+                }
+            
+                > .scrollsection > .item > .image.-active {
+                    transform: translateX(0) translateY(0) scale(1);
+                    opacity: .8;
+                    pointer-events: auto;
+                    transition: filter .3s ease,
+                        opacity 1s ease,
+                        transform 1s ease;
+                }
+            
+                > .scrollsection > .item > .image.-clicked {
+                    transform: translateX(0) translateY(0) scale(5);
+                    opacity: 0;
+                    pointer-events: auto;
+                    transition: filter .3s ease,
+                        opacity 1s ease,
+                        transform 1s ease;
+                }
+            
+                > .scrollsection > .item > .image.-active:hover {
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    filter: grayscale(0);
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+            
+    

@@ -1,66 +1,130 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Contact Us</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/contact.css">
+		<link rel="stylesheet" href="assets/css/footer.css">
+		<link href="assets/css/loadingscreen.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<!-- Favicons-->
 
-    <title>Contact Me</title>
-    <link href="assets/css/contact.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    
-
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/site.webmanifest">
-<style>
-  
-</style>
-</head>
-<body>
-    <nav class="menu flex">
-        <a href="index.html" class="menu__left">
-          JK
-        </a>
-        <ul class="menu__right flex">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="presets.html">Presets</a></li>
-          <li><a href="films.html">Films</a></li>
-          
-        </ul>
-      </nav>
-    <section id="hire">
-        <h1>Contact Me</h1>
-        <div class="contact-container">
-        <form id="contact-form">
-
-            <div class="field name-box">
-                <input type="text" id="name" name="user_name" placeholder="Who Are You?" required>
-                <label for="name">Name</label>
-            </div>
-
-            <div class="field email-box">
-                <input type="text" id="email" name="user_email" placeholder="name@email.com" required/>
-                <label for="email">Email</label>
-                <span id="email-error" class="error-message"></span>
-            </div>
-            <div class="field msg-box">
-                <textarea id="msg" rows="4" name="message" placeholder="Your message goes here..." required/></textarea>
-                <label for="msg">Message</label>
-            </div>
-            <div class="field phone-box">
-                <input type="text" id="contact_number" name="contact_number" placeholder="+254" required/>
-                <label for="phone">Phone</label>
-                <span id="phone-error" class="error-message"></span>
-            </div>
-            <input class="button" type="submit" value="Send">
-        </form>
-        <div id="result"></div>
-    </div>
-</section>
-<script type="text/javascript" src="assets/js/contact.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+		<link rel="manifest" href="assets/img/site.webmanifest">
+	</head>
+	<body>
+		<div class="loadingScreen">
+			<h3 class="loadingScreen__text">
+			  <span class="loadingScreen__text__span">l</span>
+			  <span class="loadingScreen__text__span">o</span>
+			  <span class="loadingScreen__text__span">a</span>
+			  <span class="loadingScreen__text__span">d</span>
+			  <span class="loadingScreen__text__span">i</span>
+			  <span class="loadingScreen__text__span">n</span>
+			  <span class="loadingScreen__text__span">g</span>
+			</h3>
+		  </div>
+		<div class="page-wrapper">
+			<div class="nav-wrapper">
+			 <div class="grad-bar"></div>
+			 <nav class="navbar">
+			   <img src="" alt="JV">
+			   <div class="menu-toggle" id="mobile-menu">
+				 <span class="bar"></span>
+				 <span class="bar"></span>
+				 <span class="bar"></span>
+			   </div>
+			   <ul class="nav no-search">
+				 <li class="nav-item"><a href="index.html">Home</a></li>
+				 <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+				 <li class="nav-item"><a href="films.html">Films</a></li>
+				 <li class="nav-item"><a href="presets.html">Presets</a></li>
+				 <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+			   </ul>
+			 </nav>
+			 </div>
+			<!--End of nav-->
+			<!--form-->
+			<div class="contain form-container">
+				<div class="wrapper">
+				  <div class="form">
+					<h4>GET IN TOUCH</h4>
+					<h2 class="form-headline">Send us a message</h2>
+					<form id="contact-form">
+					  <p>
+						<input id="name" class="form-input" name="user_name" type="text" placeholder="Your Name*" required>
+						<small class="name-error"></small>
+					  </p>
+					  <p>
+						<input id="email" class="form-input" name="user_email" type="email" placeholder="Your Email*" required>
+						<small class="email-error"></small>
+					  </p>
+					  <p>
+						<input id="phone" class="form-input" name="contact_number" type="phone" placeholder="Your phone number*" required>
+					  </p>
+					  <p class="full-width">
+						<div>
+							<select id="subject" name="subject" tabindex="4" required>
+								<option value="" selected disabled>Select a subject</option>
+								<option value="">No specific subject</option>
+								<option value="photo">Photography queries</option>
+								<option value="video">Videography queries</option>
+								<option value="editing">Editing queries</option>
+								<option value="wdev">Web development queries</option>
+								<option value="design">Graphic design queries</option>
+							</select>
+						</div>
+					  </p>
+					  <p class="full-width">
+						<textarea  minlength="20" id="message" name="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
+						<small></small>
+					  </p>
+					  <!--to work on this-->
+					  <p class="full-width" style="color: black;">
+						<input type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email about Company's services.
+					  </p> 
+					  <p class="full-width">
+						<input type="submit" class="submit-btn" value="submit" onclick="checkValidations()">
+						<button class="reset-btn" onclick="reset()">Reset</button>
+					  </p>
+					</form>
+					<div id="result"></div>
+				  </div>
+				  <div class="contacts contact-wrapper">
+					<ul>
+					  <li>Bringing vision to life<span class="highlight-text-white"> with over different imaginations</span> for our clients. Ready to know
+						how we can help you?</li>
+					  <span class="hightlight-contact-info">
+						<li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> havierkim@gmail.com</li>
+						<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">+254710638127</span></li>
+					  </span>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+		   </div>
+		   <!--Footer-->
+		   <footer class="footer">
+			<div class="icons">
+			   <a href="#"><i class="fab fa-facebook"></i></a>
+			   <a href="#"><i class="fab fa-linkedin"></i></a>
+			   <a href="#"><i class="fab fa-instagram"></i></a>
+			   <a href="#"><i class="fab fa-twitter"></i></a>
+				<p class="company-name" style="color:black;">
+					JafferVisuals &copy; 2023, ALL Rights Reserved
+				</p>
+			</div>
+		</footer> 
+		<script src="assets/js/contact.js" async defer></script>
+		<script async src="assets/js/loadingscreen.js"></script>
+		<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">
     (function() {
         // https://dashboard.emailjs.com/admin/account
@@ -80,7 +144,8 @@
                 });
         });
     }
+	
 
 </script>
-</body>
+	</body>
 </html>

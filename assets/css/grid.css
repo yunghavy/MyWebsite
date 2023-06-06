@@ -5,7 +5,7 @@ h1, h3, p {
   
   h1 {
     font-weight: 400;
-    color: #fff;
+    color: #000000;
     margin-bottom: 60px;
   }
   
@@ -328,7 +328,7 @@ html { box-sizing: border-box; height: 100%; overflow-y: scroll; font-size: 62.5
   padding:0;
   margin:0;
   padding:5px;
-  background:rgba(38, 180, 174, 0.66);
+  background:rgba(123, 225, 250, 0.66);
   text-align:center;
   line-height:250px;
   font-family:'Racing Sans One', cursive;
@@ -351,18 +351,6 @@ html { box-sizing: border-box; height: 100%; overflow-y: scroll; font-size: 62.5
   transition:all 0.8s ease;
   color:#ecf0f1;
 }
-
-
-/* = Responsive comming soon :)
----------------------------------*/
-/* Desktop */
-@media (min-width:980px) {}
-/* Mobile */
-@media (max-width:480px) {}
-/* Tablet */
-@media (max-width:767px) {}
-@media (min-width:768px) and (max-width:979px) {}
-
 
 /* Instagram videos */
 .instagram_videos{

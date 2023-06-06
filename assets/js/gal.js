@@ -1,3 +1,9 @@
+
+$('.menu-toggle').click(function(){
+  $(".nav").toggleClass("mobile-nav");
+  $(this).toggleClass("is-active");
+});
+
 // Trigger fade-in animation on scroll
 $(window).scroll(function() {
     var scrollPos = $(this).scrollTop();
@@ -58,4 +64,51 @@ function getVideos(el){
     this.parentNode.replaceChild(iframe, this);
   },false);  
 }
+
+function openImageOverlay(image) {
+  // Create the image overlay element
+  var overlay = document.createElement("div");
+  overlay.classList.add("image-overlay");
+
+  // Create the image element inside the overlay
+  var overlayImage = document.createElement("img");
+  overlayImage.src = image.src;
+  overlayImage.alt = image.alt;
+  overlay.appendChild(overlayImage);
+
+  // Add the overlay to the body
+  document.body.appendChild(overlay);
+
+  // Add the 'active' class to display the overlay
+  overlay.classList.add("active");
+
+  // Close the overlay when clicked
+  overlay.addEventListener("click", closeImageOverlay);
+}
+
+function closeImageOverlay() {
+  // Remove the overlay from the body
+  var overlay = document.querySelector(".image-overlay");
+  overlay.parentNode.removeChild(overlay);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll("section");
+
+  sections.forEach(function(section, index) {
+    setTimeout(function() {
+      section.classList.remove("opacity-0", "translate-y-5");
+      section.classList.add("opacity-100", "translate-y-0");
+    }, index * 500);
+  });
+});
+
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Prevent image drag and drop
+document.addEventListener('dragstart', function (e) {
+  e.preventDefault();
+});
 
