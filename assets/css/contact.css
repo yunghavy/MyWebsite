@@ -144,8 +144,8 @@ h2 {
 }
 
 .search {
-  transform: translate(-35%);
   -webkit-transform: translate(-35%);
+  transform: translate(-35%);
   transition: transform 0.7s ease-in-out;
   color: #3498db;
 }

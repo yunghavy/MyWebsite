@@ -147,11 +147,12 @@ h2 {
 }
 
 .search {
-  transform: translate(-35%);
   -webkit-transform: translate(-35%);
+  transform: translate(-35%);
   transition: transform 0.7s ease-in-out;
   color: #3498db;
 }
+
 
 .no-search {
   transform: translate(0);
@@ -420,7 +421,7 @@ input {
 
 
   .div-contact{
-    align: center;
+    text-align: center;
     color: white;
     padding-top: 0%;
     padding-bottom: 0%;
