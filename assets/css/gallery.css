@@ -42,7 +42,7 @@ h2 {
   width: 100%;
   position: fixed; /* Safari */
   top: 0;
-  background-color: #fff;
+  background-color: whitesmoke;
   z-index: 999;
 }
 
@@ -82,7 +82,7 @@ h2 {
 }
 
 .nav-item a {
-  color: #000;
+  color: black;
   font-size: 0.9rem;
   font-weight: 400;
   text-decoration: none;

@@ -85,8 +85,9 @@
 						<small></small>
 					  </p>
 					  <!--to work on this-->
-					  <p class="full-width" style="color: black;">
-						<input type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email.
+					  <p class="full-width" style="color: black; display: flex; align-items: center;">
+						<input type="checkbox" id="checkbox" name="checkbox" checked>
+						<span style="margin-left: 0.5rem;">Yes, I would like to receive communications by call / email.</span>
 					  </p> 
 					  <p class="full-width">
 						<input type="submit" class="submit-btn" value="submit" onclick="checkValidations()">
@@ -99,7 +100,7 @@
 					<ul>
 					  <li>Bringing vision to life<span class="highlight-text-white"> with over different imaginations</span> for our clients. Ready to know
 						how we can help you?</li>
-					  <span class="hightlight-contact-info">
+					  <span class="highlight-contact-info">
 						<li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> havierkim@gmail.com</li>
 						<li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">+254710638127</span></li>
 					  </span>
@@ -124,6 +125,7 @@
 		<script async src="assets/js/loadingscreen.js"></script>
 		<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script async src="assets/js/gal.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">
     (function() {
@@ -139,12 +141,28 @@
             emailjs.sendForm('service_ykobpd9', 'template_xh6rqrr', this)
                 .then(function() {
                     console.log('SUCCESS!');
+					if (document.getElementById('checkbox').checked) {
+						sendNotificationEmail();
+					  }
                 }, function(error) {
                     console.log('FAILED...', error);
                 });
         });
     }
-	
+	function sendNotificationEmail() {
+		const templateParams = {
+		  to_email: 'havierkim@gmail.com', 
+		  message: 'A user has requested to receive communications by call / email.',
+
+		};
+	  
+		emailjs.send('service_ykobpd9', 'template_xh6rqrr', templateParams)
+		  .then(function() {
+			console.log('Notification email sent successfully!');
+		  }, function(error) {
+			console.log('Failed to send notification email:', error);
+		  });
+	  }
 
 </script>
 	</body>

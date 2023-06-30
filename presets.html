@@ -5,12 +5,12 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <title>Presets</title>
             <meta name="description" content="">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
             <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
             <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
             <link rel="manifest" href="assets/img/site.webmanifest">
-            <link rel="stylesheet" href="assets/css/testy.css">
+            <link rel="stylesheet" href="assets/css/presets.css">
             <link rel="stylesheet" href="assets/css/loadingscreen.css">
             <link rel="stylesheet" href="assets/css/footer.css">
         </head>
@@ -111,17 +111,26 @@
         </section>
             <!-- End of section-->
             <main class="flex__col">
-                <nav class="menu flex">
-                <a href="index.html" class="menu__left">
-                   YH
-                </a>
-                <ul class="menu__right flex">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="films.html">Films</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                </nav>
+                <div>
+                    <div class="page-wrapper">
+                      <div class="nav-wrapper">
+                       <div class="grad-bar"></div>
+                       <nav class="navbar">
+                        <a href="index.html"> <alt="YH"></a>
+                         <div class="menu-toggle" id="mobile-menu">
+                         <span class="bar"></span>
+                         <span class="bar"></span>
+                         <span class="bar"></span>
+                         </div>
+                         <ul class="nav no-search">
+                         <li class="nav-item"><a href="index.html">Home</a></li>
+                         <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+                         <li class="nav-item"><a href="films.html">Films</a></li>
+                         <li class="nav-item"><a href="presets.html">Presets</a></li>
+                         <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+                         </ul>
+                       </nav>
+                       </div>
                 <section class="intro flex">
                 <h1>EDIT YOUR CAMERA PHOTOS WITH"<br/>"ONE CLICK</h1>
                 <img src="https://images.unsplash.com/photo-1574717025058-2f8737d2e2b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWRpdGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
@@ -129,7 +138,8 @@
                     "Editing is like sculpting. You chip away at the excess until you reveal the essence." - Sidney Lumet
                 </p>
                 </section>
-                <section class="list flex__col">
+                <section class="list">
+                  
                 <div class="list__item flex">
                     <img src="https://images.unsplash.com/photo-1528109966604-5a6a4a964e8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHZpZGVvJTIwbHV0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60">
                     <div class="list__item__title">Video Luts</div>
@@ -180,7 +190,10 @@
         </div>
     </footer>
           <!-- end -->
+          
             <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script async src="assets/js/gal.js"></script>
             <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
             <script src="assets/js/parallax.js" async defer></script>
             <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>

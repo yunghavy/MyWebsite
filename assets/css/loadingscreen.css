@@ -25,7 +25,28 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
 }
+@media (max-width: 768px) {
+  .loadingScreen {
+    width: 100%;
+    height: 100%;
+  }
 
+  .loadingScreen__text {
+    width: 100%;
+    height: 100px;
+  }
+}
+@media (max-width: 320px) {
+  .loadingScreen {
+    width: 100%;
+    height: 100%;
+  }
+
+  .loadingScreen__text {
+    width: 100%;
+    height: 100px;
+  }
+}
 /* LoadingScreen Style */
 
 .loadingScreen {

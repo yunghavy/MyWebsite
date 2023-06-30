@@ -1,4 +1,23 @@
-/**
+@media (min-width: 1024px) {
+  #hero {
+    width: 100%;
+    height: 600vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (min-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
 
 /*--------------------------------------------------------------
 # General
@@ -221,10 +240,11 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100vh;
-  background: url("../img/bg2.png") center top;
+  height: 600px;
+  background: url("../img/bg2.png")center top ;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  
 }
 
 #hero:before {
@@ -246,7 +266,7 @@ h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -255,36 +275,74 @@ h6 {
 #hero p {
   color: #fff;
   margin-bottom: 50px;
-  font-size: 26px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-  color: #fff;
+  color: #ffffff;
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
 }
 
-@media (min-width: 1024px) {
+
+@media (min-width: 320px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
   #hero {
-    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background: url("../img/bg2.png") ;
+  }
+ 
+  .facts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .facts .count-box {
+    width: 100%;
+    margin: 0;
+  }
+
+  .facts .count-box .i {
+    font-size: 1rem;
+  }
+
+  .facts .count-box .p {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+  .section-title {
+    font-size: 0.8rem;
+  }
+  .section-title p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  .p{
+    font-size: 14px;
+  }
+  .h2{
+    font-size: 25px; 
+  }
+  .h3{
+    font-size: 20px;
   }
 }
-
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-}
-
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -294,7 +352,7 @@ section {
 }
 
 .section-bg {
-  background: #f5f8fd;
+  background: #f5fafd;
 }
 
 .section-title {
@@ -332,32 +390,6 @@ section {
   font-weight: 700;
   font-size: 26px;
   color: #173b6c;
-}
-
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.about .content ul strong {
-  margin-right: 10px;
-}
-
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: #149ddd;
-  line-height: 0;
-}
-
-.about .content p:last-child {
-  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
