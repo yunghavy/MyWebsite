@@ -83,9 +83,9 @@ ul {
 }
 
 .nav-item a {
-    color: yellow;
+    color: #001C30;
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease-out;
 }
@@ -410,7 +410,7 @@ section img {
 
 #text {
     position: relative;
-    color: white;
+    color: #1B6B93;
     font-size: 8rem;
 }
 
