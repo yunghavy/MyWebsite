@@ -80,7 +80,7 @@ h2 {
 
 .nav-item a {
   color: #000;
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.3s ease-out;
@@ -375,7 +375,7 @@ input {
   }
   
   .navbar li a {
-    font-size: 1rem;
+    font-size: 2rem;
   }
    
   .menu-toggle, .bar {

@@ -308,8 +308,13 @@
     }
     
     .navbar li a {
-      font-size: 2rem;
+      font-size: 1.0rem;
+      color: #000;
+      font-weight: 400;
+      text-decoration: none;
+      transition: color 0.3s ease-out;
     }
+  
      
     .menu-toggle, .bar {
       display: block;
